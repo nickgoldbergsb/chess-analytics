@@ -22,7 +22,7 @@ def get_rapid_game_statistics(username):
         username=username).json
     raw_chess_rapid_statistics = response['stats']['chess_rapid']
 
-    with open(f'resources/data/raw_chess_rapid_statistics.json', 'w') as f:
+    with open('resources/data/raw_chess_rapid_statistics.json', 'w') as f:
         json.dump(raw_chess_rapid_statistics, f)
 
 def get_blitz_game_statistics(username):
@@ -30,5 +30,5 @@ def get_blitz_game_statistics(username):
         username=username).json
     raw_chess_blitz_statistics = response['stats']['chess_blitz']
 
-    with open(f'resources/data/raw_chess_blitz_statistics.json', 'w') as f:
+    with open('resources/data/raw_chess_blitz_statistics.json', 'w') as f:
         json.dump(raw_chess_blitz_statistics, f)

@@ -1,0 +1,21 @@
+[2023-09-01T16:01:50.265+0000] {manager.py:488} INFO - Processing files using up to 2 processes at a time 
+[2023-09-01T16:01:50.266+0000] {manager.py:489} INFO - Process each file at most once every 30 seconds
+[2023-09-01T16:01:50.267+0000] {manager.py:490} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2023-09-01T16:01:50.268+0000] {manager.py:760} INFO - Searching for files in /opt/airflow/dags
+[2023-09-01T16:01:50.276+0000] {manager.py:763} INFO - There are 1 files in /opt/airflow/dags
+[2023-09-01T16:01:50.345+0000] {manager.py:888} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/s3_upload.py     33  0.03s             0           0
+================================================================================
+[2023-09-01T16:02:20.542+0000] {manager.py:888} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_upload.py                           0           1  0.46s           2023-09-01T16:01:50
+================================================================================
