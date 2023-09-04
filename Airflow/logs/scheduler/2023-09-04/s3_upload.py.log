@@ -1243,3 +1243,45 @@ DETAIL:  Key (dag_id)=(s3_upload) already exists.
 [2023-09-04T19:46:10.053+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:46:10.053+0000] {dag.py:2907} INFO - Sync 1 DAGs
 [2023-09-04T19:46:10.065+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:46:10.065+0000] {dag.py:3677} INFO - Setting next_dagrun for s3_upload to 2023-09-01T00:00:00+00:00, run_after=2023-10-01T00:00:00+00:00
 [2023-09-04T19:46:10.074+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/s3_upload.py took 0.072 seconds
+[2023-09-04T19:51:52.661+0000] {processor.py:157} INFO - Started process (PID=564) to work on /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:51:52.663+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/s3_upload.py for tasks to queue
+[2023-09-04T19:51:52.665+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:51:52.664+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:51:52.686+0000] {processor.py:839} INFO - DAG(s) dict_keys(['s3_upload_xcom']) retrieved from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:51:52.761+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:51:52.761+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T19:51:52.773+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:51:52.773+0000] {dag.py:3677} INFO - Setting next_dagrun for s3_upload_xcom to 2023-09-01T00:00:00+00:00, run_after=2023-10-01T00:00:00+00:00
+[2023-09-04T19:51:52.785+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/s3_upload.py took 0.128 seconds
+[2023-09-04T19:52:22.928+0000] {processor.py:157} INFO - Started process (PID=572) to work on /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:52:22.931+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/s3_upload.py for tasks to queue
+[2023-09-04T19:52:22.933+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:52:22.932+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:52:22.956+0000] {processor.py:839} INFO - DAG(s) dict_keys(['s3_upload_xcom']) retrieved from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:52:22.976+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:52:22.975+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T19:52:22.988+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:52:22.988+0000] {dag.py:3677} INFO - Setting next_dagrun for s3_upload_xcom to 2023-09-01T00:00:00+00:00, run_after=2023-10-01T00:00:00+00:00
+[2023-09-04T19:52:22.996+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/s3_upload.py took 0.075 seconds
+[2023-09-04T19:52:53.287+0000] {processor.py:157} INFO - Started process (PID=581) to work on /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:52:53.289+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/s3_upload.py for tasks to queue
+[2023-09-04T19:52:53.290+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:52:53.290+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:52:53.309+0000] {processor.py:839} INFO - DAG(s) dict_keys(['s3_upload_xcom']) retrieved from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:52:53.328+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:52:53.328+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T19:52:53.341+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:52:53.341+0000] {dag.py:3677} INFO - Setting next_dagrun for s3_upload_xcom to 2023-09-01T00:00:00+00:00, run_after=2023-10-01T00:00:00+00:00
+[2023-09-04T19:52:53.349+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/s3_upload.py took 0.067 seconds
+[2023-09-04T19:53:23.644+0000] {processor.py:157} INFO - Started process (PID=588) to work on /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:53:23.646+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/s3_upload.py for tasks to queue
+[2023-09-04T19:53:23.648+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:53:23.647+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:53:23.670+0000] {processor.py:839} INFO - DAG(s) dict_keys(['s3_upload_xcom']) retrieved from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:53:23.690+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:53:23.690+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T19:53:23.704+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:53:23.704+0000] {dag.py:3677} INFO - Setting next_dagrun for s3_upload_xcom to 2023-09-01T00:00:00+00:00, run_after=2023-10-01T00:00:00+00:00
+[2023-09-04T19:53:23.713+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/s3_upload.py took 0.075 seconds
+[2023-09-04T19:53:53.940+0000] {processor.py:157} INFO - Started process (PID=596) to work on /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:53:53.944+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/s3_upload.py for tasks to queue
+[2023-09-04T19:53:53.948+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:53:53.948+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:53:53.965+0000] {processor.py:839} INFO - DAG(s) dict_keys(['s3_upload_xcom']) retrieved from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:53:53.985+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:53:53.984+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T19:53:53.997+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:53:53.997+0000] {dag.py:3677} INFO - Setting next_dagrun for s3_upload_xcom to 2023-09-01T00:00:00+00:00, run_after=2023-10-01T00:00:00+00:00
+[2023-09-04T19:53:54.007+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/s3_upload.py took 0.073 seconds
+[2023-09-04T19:54:24.248+0000] {processor.py:157} INFO - Started process (PID=604) to work on /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:54:24.251+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/s3_upload.py for tasks to queue
+[2023-09-04T19:54:24.252+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:54:24.252+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:54:24.274+0000] {processor.py:839} INFO - DAG(s) dict_keys(['s3_upload_xcom']) retrieved from /opt/airflow/dags/s3_upload.py
+[2023-09-04T19:54:24.294+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:54:24.293+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2023-09-04T19:54:24.306+0000] {logging_mixin.py:151} INFO - [2023-09-04T19:54:24.306+0000] {dag.py:3677} INFO - Setting next_dagrun for s3_upload_xcom to 2023-09-01T00:00:00+00:00, run_after=2023-10-01T00:00:00+00:00
+[2023-09-04T19:54:24.314+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/s3_upload.py took 0.071 seconds
