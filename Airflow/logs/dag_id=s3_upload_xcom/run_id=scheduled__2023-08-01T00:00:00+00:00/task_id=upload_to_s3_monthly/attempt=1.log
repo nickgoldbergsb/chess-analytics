@@ -1,0 +1,22 @@
+[2023-09-04T19:23:47.348+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_upload_xcom.upload_to_s3_monthly scheduled__2023-08-01T00:00:00+00:00 [queued]>
+[2023-09-04T19:23:47.356+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_upload_xcom.upload_to_s3_monthly scheduled__2023-08-01T00:00:00+00:00 [queued]>
+[2023-09-04T19:23:47.357+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-04T19:23:47.366+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): upload_to_s3_monthly> on 2023-08-01 00:00:00+00:00
+[2023-09-04T19:23:47.370+0000] {standard_task_runner.py:57} INFO - Started process 88 to run task
+[2023-09-04T19:23:47.373+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_upload_xcom', 'upload_to_s3_monthly', 'scheduled__2023-08-01T00:00:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/s3_upload_xcom.py', '--cfg-path', '/tmp/tmpyg56rxmg']
+[2023-09-04T19:23:47.375+0000] {standard_task_runner.py:85} INFO - Job 51: Subtask upload_to_s3_monthly
+[2023-09-04T19:23:47.447+0000] {task_command.py:415} INFO - Running <TaskInstance: s3_upload_xcom.upload_to_s3_monthly scheduled__2023-08-01T00:00:00+00:00 [running]> on host a4701647eeb7
+[2023-09-04T19:23:47.521+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_upload_xcom' AIRFLOW_CTX_TASK_ID='upload_to_s3_monthly' AIRFLOW_CTX_EXECUTION_DATE='2023-08-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-08-01T00:00:00+00:00'
+[2023-09-04T19:23:47.525+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/s3_upload_xcom.py", line 22, in upload_to_s3
+    data = task_instance.xcom_pull(tasks_ids="task_get_monthly_games")
+NameError: name 'task_instance' is not defined
+[2023-09-04T19:23:47.545+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=s3_upload_xcom, task_id=upload_to_s3_monthly, execution_date=20230801T000000, start_date=20230904T192347, end_date=20230904T192347
+[2023-09-04T19:23:47.557+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 51 for task upload_to_s3_monthly (name 'task_instance' is not defined; 88)
+[2023-09-04T19:23:47.586+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-04T19:23:47.604+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

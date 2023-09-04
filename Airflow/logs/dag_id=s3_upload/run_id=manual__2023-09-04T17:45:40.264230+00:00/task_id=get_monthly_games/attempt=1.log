@@ -1,0 +1,22 @@
+[2023-09-04T17:45:41.233+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_upload.get_monthly_games manual__2023-09-04T17:45:40.264230+00:00 [queued]>
+[2023-09-04T17:45:41.247+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_upload.get_monthly_games manual__2023-09-04T17:45:40.264230+00:00 [queued]>
+[2023-09-04T17:45:41.248+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-04T17:45:41.257+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): get_monthly_games> on 2023-09-04 17:45:40.264230+00:00
+[2023-09-04T17:45:41.263+0000] {standard_task_runner.py:57} INFO - Started process 715 to run task
+[2023-09-04T17:45:41.269+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_upload', 'get_monthly_games', 'manual__2023-09-04T17:45:40.264230+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/s3_upload.py', '--cfg-path', '/tmp/tmp3ufhhiq8']
+[2023-09-04T17:45:41.271+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask get_monthly_games
+[2023-09-04T17:45:41.322+0000] {task_command.py:415} INFO - Running <TaskInstance: s3_upload.get_monthly_games manual__2023-09-04T17:45:40.264230+00:00 [running]> on host 0f3e7eb4507c
+[2023-09-04T17:45:41.409+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_upload' AIRFLOW_CTX_TASK_ID='get_monthly_games' AIRFLOW_CTX_EXECUTION_DATE='2023-09-04T17:45:40.264230+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-04T17:45:40.264230+00:00'
+[2023-09-04T17:45:42.273+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/s3_upload.py", line 30, in get_monthly_games
+    with open('/Users/nicholas.goldberg/chess-analytics/Airflow/data/raw_monthly_games.json', 'w') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/nicholas.goldberg/chess-analytics/Airflow/data/raw_monthly_games.json'
+[2023-09-04T17:45:42.296+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=s3_upload, task_id=get_monthly_games, execution_date=20230904T174540, start_date=20230904T174541, end_date=20230904T174542
+[2023-09-04T17:45:42.309+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 37 for task get_monthly_games ([Errno 2] No such file or directory: '/Users/nicholas.goldberg/chess-analytics/Airflow/data/raw_monthly_games.json'; 715)
+[2023-09-04T17:45:42.341+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-09-04T17:45:42.361+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

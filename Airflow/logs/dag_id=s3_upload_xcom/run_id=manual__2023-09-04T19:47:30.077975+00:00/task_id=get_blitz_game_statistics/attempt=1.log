@@ -1,0 +1,13 @@
+[2023-09-04T19:47:32.725+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_upload_xcom.get_blitz_game_statistics manual__2023-09-04T19:47:30.077975+00:00 [queued]>
+[2023-09-04T19:47:32.731+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_upload_xcom.get_blitz_game_statistics manual__2023-09-04T19:47:30.077975+00:00 [queued]>
+[2023-09-04T19:47:32.732+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-09-04T19:47:32.737+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): get_blitz_game_statistics> on 2023-09-04 19:47:30.077975+00:00
+[2023-09-04T19:47:32.740+0000] {standard_task_runner.py:57} INFO - Started process 510 to run task
+[2023-09-04T19:47:32.743+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_upload_xcom', 'get_blitz_game_statistics', 'manual__2023-09-04T19:47:30.077975+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/s3_upload_xcom.py', '--cfg-path', '/tmp/tmpokbsxtt2']
+[2023-09-04T19:47:32.744+0000] {standard_task_runner.py:85} INFO - Job 73: Subtask get_blitz_game_statistics
+[2023-09-04T19:47:32.774+0000] {task_command.py:415} INFO - Running <TaskInstance: s3_upload_xcom.get_blitz_game_statistics manual__2023-09-04T19:47:30.077975+00:00 [running]> on host a4701647eeb7
+[2023-09-04T19:47:32.819+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_upload_xcom' AIRFLOW_CTX_TASK_ID='get_blitz_game_statistics' AIRFLOW_CTX_EXECUTION_DATE='2023-09-04T19:47:30.077975+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-09-04T19:47:30.077975+00:00'
+[2023-09-04T19:47:32.921+0000] {python.py:194} INFO - Done. Returned value was: {'last': {'rating': 1063, 'date': 1693841451, 'rd': 24}, 'best': {'rating': 1104, 'date': 1693675655, 'game': 'https://www.chess.com/game/live/87406314335'}, 'record': {'win': 1554, 'loss': 1491, 'draw': 161}}
+[2023-09-04T19:47:32.940+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_upload_xcom, task_id=get_blitz_game_statistics, execution_date=20230904T194730, start_date=20230904T194732, end_date=20230904T194732
+[2023-09-04T19:47:32.956+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-04T19:47:32.971+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check
