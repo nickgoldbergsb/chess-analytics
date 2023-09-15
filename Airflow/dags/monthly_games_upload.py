@@ -16,7 +16,7 @@ async def gather_cors(cor):
 currentMonth = datetime.now().month
 currentYear = datetime.now().year
 currentDay = datetime.now().day
-date_string = f"{currentYear}-{currentMonth}-{currentDay}" ## datetime.now() ??
+date_string = f"{currentYear}-{currentMonth}-{currentDay}"
 
 def get_monthly_games(username, year=currentYear, month=currentMonth):
     cor = get_player_games_by_month(username=username,year=year, month=month)
@@ -34,7 +34,7 @@ with DAG('s3_upload_xcom',
         task_id='get_monthly_games',
         python_callable=get_monthly_games,
         op_kwargs={
-            'username':'nickgoldbergg' ## abstract
+            'username':'nickgoldbergg'
         }
     )
 
@@ -42,7 +42,7 @@ with DAG('s3_upload_xcom',
         task_id='upload_to_s3_monthly',
         aws_conn_id='s3_conn',
         s3_bucket='chess-analytics-nickgoldbergg',
-        s3_key=f'raw/{date_string}/monthly_games.json', ## abstract
+        s3_key=f'raw/{date_string}/monthly_games.json',
         data='{{ task_instance.xcom_pull(task_ids="task_get_monthly_games") }}'
     )
 

@@ -16,13 +16,14 @@ async def gather_cors(cor):
 currentMonth = datetime.now().month
 currentYear = datetime.now().year
 currentDay = datetime.now().day
-date_string = f"{currentYear}-{currentMonth}-{currentDay}" ## datetime.now() ??
+date_string = f"{currentYear}-{currentMonth}-{currentDay}"
 
 def get_game_statistics(username):
     cor = get_player_stats(username=username)
     response = asyncio.run(cor).json
+    game_stats = response['stats']
 
-    return response
+    return game_stats
 
 with DAG('s3_upload_xcom', 
          start_date=datetime(2022, 1, 1),
@@ -33,14 +34,14 @@ with DAG('s3_upload_xcom',
         task_id='get_game_statistics',
         python_callable=get_game_statistics,
         op_kwargs={
-            'username':'nickgoldbergg' ## abstract
+            'username':'nickgoldbergg'
         }
     )
 
     task_upload_stats_to_s3 = S3CreateObjectOperator(
         task_id='upload_stats_to_s3',
         aws_conn_id='s3_conn',
-        s3_bucket='chess-analytics-nickgoldbergg', ## abstract
+        s3_bucket='chess-analytics-nickgoldbergg',
         s3_key=f'raw/{date_string}/chess_statistics.json',
         data='{{ task_instance.xcom_pull(task_ids="task_get_game_statistics") }}'
     )
