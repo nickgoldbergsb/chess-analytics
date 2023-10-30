@@ -43,7 +43,7 @@ with DAG('monthly_games_upload',
         aws_conn_id='s3_conn',
         s3_bucket='chess-analytics-nickgoldbergg',
         s3_key=f'raw/{date_string}/monthly_games.json',
-        data='{{ task_instance.xcom_pull(task_ids="task_get_monthly_games") }}'
+        data='{{ task_instance.xcom_pull(task_ids="get_monthly_games") }}'
     )
 
     task_get_monthly_games >> task_upload_monthly_to_s3

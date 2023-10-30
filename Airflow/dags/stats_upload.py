@@ -43,7 +43,7 @@ with DAG('stats_upload',
         aws_conn_id='s3_conn',
         s3_bucket='chess-analytics-nickgoldbergg',
         s3_key=f'raw/{date_string}/chess_statistics.json',
-        data='{{ task_instance.xcom_pull(task_ids="task_get_game_statistics") }}'
+        data='{{ task_instance.xcom_pull(task_ids="get_game_statistics") }}'
     )
 
     task_get_game_statistics >> task_upload_stats_to_s3
