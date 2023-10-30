@@ -25,7 +25,7 @@ def get_game_statistics(username):
 
     return game_stats
 
-with DAG('s3_upload_xcom', 
+with DAG('stats_upload', 
          start_date=datetime(2022, 1, 1),
          schedule_interval='@daily', 
          catchup=False) as dag:
